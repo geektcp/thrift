@@ -4,6 +4,7 @@
 从服务端的套接字里面获取到了客户端的源IP即公网地址
 
 
+
 ###网络编程模式
 arg.selectorThreads(Integer.parseInt(mProp.get("LogServerSelectorThread").toString()));
 这步骤是启动了多个线程，每个线程里面有个bocking queue队列，队列元素是socketchannel，线程启动后就不断消费这个队列
@@ -26,8 +27,6 @@ invoker.submit(new Runnable() { public void run() { doAddAccept(targetThread, cl
 
 thirft调度策略有：FAIR_ACCEPT和FAST_ACCEPT，默认是后者，
 就是说FAST_ACCEPT模式其实就是答案里说的，只是用了一个线程池模式，没有用ExcuteServcie
-
- 
 
  
 
