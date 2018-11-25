@@ -4,7 +4,7 @@
 从服务端的套接字里面获取到了客户端的源IP即公网地址
 
 
-###网络编程模式
+=网络编程模式
 arg.selectorThreads(Integer.parseInt(mProp.get("LogServerSelectorThread").toString()));
 这步骤是启动了多个线程，每个线程里面有个bocking queue队列，队列元素是socketchannel，线程启动后就不断消费这个队列
 并不是select使用了多线程，而是便利selectkey时，没当有一个连接socketchannel进来就加入队列，
